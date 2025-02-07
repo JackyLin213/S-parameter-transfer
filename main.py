@@ -23,9 +23,9 @@ def sdd21_function(num_equations):
             print(f"SDD21 = 0.5*(S({pos1[0]},{pos1[1]})-S({pos2[0]},{pos2[1]})-S({pos3[0]},{pos3[1]})+S({pos4[0]},{pos4[1]}))")
 
 def sdd11_function(num_equations):
-    # 驗證輸入是否為正整數
+    # 驗證輸入是否為大於 0 的正整數
     if not isinstance(num_equations, int) or num_equations <= 0:
-        print("請輸入正整數")
+        print("請輸入大於 0 的正整數")
         return
     
     for i in range(num_equations):
