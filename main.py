@@ -39,8 +39,12 @@ def sdd11_function(num_equations):
             print("SDD11 = 0.5*(S55-S57-S75+S77)")
         else:
             # 計算四個S參數的位置
-            pos = base + 8  # 從9開始遞增
-            print(f"SDD11 = 0.5*(S({pos+1},{pos+1})-S({pos+1},{pos+3})-S({pos+3},{pos+1})+S({pos+3},{pos+3}))")
+            pos1 = (base + 1, base + 1)    
+            pos2 = (base + 1, base + 3)    
+            pos3 = (base + 3, base + 1)    
+            pos4 = (base + 3, base + 3)    
+            
+            print(f"SDD11 = 0.5*(S({pos1[0]},{pos1[1]})-S({pos2[0]},{pos2[1]})-S({pos3[0]},{pos3[1]})+S({pos4[0]},{pos4[1]}))")
 
 # 主程式
 while True:
